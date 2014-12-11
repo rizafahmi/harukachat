@@ -1,24 +1,16 @@
 /*****************************************************************************/
-/* RoomsIndex: Event Handlers and Helpersss .js*/
+/* ChatsIndex: Event Handlers and Helpersss .js*/
 /*****************************************************************************/
-Template.RoomsIndex.events({
+Template.ChatsIndex.events({
   /*
    * Example:
    *  'click .selector': function (e, tmpl) {
    *
    *  }
    */
-  'click .enterButton': function (e, tmpl) {
-    Log.insert({dateTime: new Date(),
-      userId: Session.get('userId'),
-      courseId: Session.get('courseId'),
-      logText: "Enter the room"
-    });
-    Router.go('home');
-  }
 });
 
-Template.RoomsIndex.helpers({
+Template.ChatsIndex.helpers({
   /*
    * Example:
    *  items: function () {
@@ -28,13 +20,13 @@ Template.RoomsIndex.helpers({
 });
 
 /*****************************************************************************/
-/* RoomsIndex: Lifecycle Hooks */
+/* ChatsIndex: Lifecycle Hooks */
 /*****************************************************************************/
-Template.RoomsIndex.created = function () {
+Template.ChatsIndex.created = function () {
 };
 
-Template.RoomsIndex.rendered = function () {
+Template.ChatsIndex.rendered = function () {
 };
 
-Template.RoomsIndex.destroyed = function () {
+Template.ChatsIndex.destroyed = function () {
 };
