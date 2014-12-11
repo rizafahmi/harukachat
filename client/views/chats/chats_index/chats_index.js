@@ -17,6 +17,9 @@ Template.ChatsIndex.helpers({
    *    return Items.find();
    *  }
    */
+  'usersList': function () {
+    return CurrentRoom.find();
+  }
 });
 
 /*****************************************************************************/

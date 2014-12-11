@@ -1,9 +1,9 @@
 ChatsIndexController = RouteController.extend({
   waitOn: function () {
+    return Meteor.subscribe('current_room');
   },
 
   data: function () {
-    console.log("A");
   },
 
   action: function () {

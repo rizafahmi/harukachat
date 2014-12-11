@@ -9,15 +9,11 @@
           </tr>
         </thead>
         <tbody>
+          {{#each usersList}}
           <tr>
-            <td>User 1</td>
+            <td>User {{userId}}</td>
           </tr>
-          <tr>
-            <td>User 2</td>
-          </tr>
-          <tr>
-            <td>User 3</td>
-          </tr>
+          {{/each}}
         </tbody>
       </table>
     </div>
@@ -40,9 +36,9 @@
             <td>User 1</td>
             <td>
               <form action="">
-                
+
                 <textarea name="text" rows="3" class="form-control" placeholder="Click here to type a chat. Enter to send messages. Maximum 250 characters."></textarea>
-              
+
               </form>
 
             </td>

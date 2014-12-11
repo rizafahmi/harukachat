@@ -14,6 +14,21 @@ Template.RoomsIndex.events({
       courseId: Session.get('courseId'),
       logText: "Enter the room"
     });
+
+    // Delete first, then insert
+    var currentRoom = CurrentRoom.find({userId: Session.get('userId'),
+      courseId: Session.get('courseId')
+    });
+
+    currentRoom.forEach( function (userRoom) {
+      CurrentRoom.remove({_id: userRoom._id});
+    });
+
+    CurrentRoom.insert({dateTime: new Date(),
+      userId: Session.get('userId'),
+      courseId: Session.get('courseId')
+    });
+
     Router.go('chats.index', {user_id: Session.get('userId'), course_id: Session.get('courseId')});
   }
 });

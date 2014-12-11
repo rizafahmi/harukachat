@@ -1,5 +1,7 @@
 RoomsIndexController = RouteController.extend({
   waitOn: function () {
+    var currentRoom = Meteor.subscribe('current_room');
+    return currentRoom;
   },
 
   data: function () {
