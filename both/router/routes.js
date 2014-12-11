@@ -13,4 +13,5 @@ Router.configure({
 */
 
 Router.route('/', {name: 'home'});
-Router.route('/student/:user_id/:chat_room', {name: 'chat.room'});
+Router.route('/student/:user_id/:course_id', {name: 'rooms.index'})
+Router.route('/', {name: 'chats.index'});
