@@ -14,7 +14,7 @@ Template.RoomsIndex.events({
       courseId: Session.get('courseId'),
       logText: "Enter the room"
     });
-    Router.go('home');
+    Router.go('chats.index', {user_id: Session.get('userId'), course_id: Session.get('courseId')});
   }
 });
 
