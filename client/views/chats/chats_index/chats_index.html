@@ -20,31 +20,31 @@
 
     <!-- END User Lists -->
 
-    <div class="col-md-8">
-      <table class="table table-striped">
-        <thead>
-          <tr>
-            <th colspan=2>Chat Advanced Communication Theory</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>User 1</td>
-            <td>There can be no thought of finishing for ‘aiming for the stars.’ Both figuratively and literally, it is a task to occupy the generations. <small>5 minutes ago.</small></td>
-          </tr>
-          <tr>
-            <td>User 1</td>
-            <td>
-              <form action="">
+    <div class="col-md-8 chats">
+      <div class="chat-app">
+        <div class="chat-header"><h3>Chat Advanced Communication Theory</h3></div>
+        <div class="chat-content">
+          <div class="chat-item">
+            <div class="aside col-md-2">User 1</div>
+            <div class="article col-md-10">
+              There can be no thought of finishing for ‘aiming for the stars.’ Both figuratively and literally, it is a task to occupy the generations. <small>5 minutes ago.</small>
+            </div>
+          </div>
+        </div>
 
-                <textarea name="text" rows="3" class="form-control" placeholder="Click here to type a chat. Enter to send messages. Maximum 250 characters."></textarea>
+        <!-- BEGIN chat-input -->
 
-              </form>
+        <div class="chat-input">
 
-            </td>
-          </tr>
-        </tbody>
-      </table>
+          <form action="">
+
+              <textarea name="text" rows="3" class="form-control" placeholder="Click here to type a chat. Enter to send messages. Maximum 250 characters."></textarea>
+
+          </form>
+        </div>
+
+        <!-- END chat-input -->
+      </div>
     </div>
   </div>
 </template>
