@@ -23,22 +23,29 @@
     <div class="col-md-8 chats">
       <div class="chat-app">
         <div class="chat-header"><h3>Chat Advanced Communication Theory</h3></div>
-        <div class="chat-content">
+        <div class="chat-content" style="height: 550px; overflow-y: scroll">
+          {{# each chats}}
           <div class="chat-item">
-            <div class="aside col-md-2">User 1</div>
+            <div class="aside col-md-2">{{userId}}</div>
             <div class="article col-md-10">
-              There can be no thought of finishing for ‘aiming for the stars.’ Both figuratively and literally, it is a task to occupy the generations. <small>5 minutes ago.</small>
+              {{text}} <small>5 minutes ago.</small>
             </div>
           </div>
+          {{/each}}
         </div>
 
         <!-- BEGIN chat-input -->
 
-        <div class="chat-input">
+        <div class="chat-input" style="padding-top: 20px;">
 
-          <form action="">
+          <form class="chatForm">
 
+            <div class="col-md-11">
               <textarea name="text" rows="3" class="form-control" placeholder="Click here to type a chat. Enter to send messages. Maximum 250 characters."></textarea>
+            </div>
+            <div class="col-md-1">
+              <button type="submit" class="btn btn-sm btn-warning" style="height: 72px;">Send!</button>
+            </div>
 
           </form>
         </div>
