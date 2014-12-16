@@ -16,6 +16,7 @@ Template.ChatsIndex.events({
     });
 
     $(e.target).find('[name=text]').val("");
+    $(".chat-content").scrollTop($(".chat-content")[0].scrollHeight);
 
   }
 });
@@ -25,7 +26,7 @@ Template.ChatsIndex.helpers({
     return CurrentRoom.find();
   },
   'chats': function () {
-    return Chats.find();
+    return Chats.find({}, {sort: {dateCreated: 1}});
   }
 });
 
@@ -36,6 +37,8 @@ Template.ChatsIndex.created = function () {
 };
 
 Template.ChatsIndex.rendered = function () {
+  console.log("Rendered");
+  $(".chat-content").scrollTop($(".chat-content")[0].scrollHeight);
 };
 
 Template.ChatsIndex.destroyed = function () {
