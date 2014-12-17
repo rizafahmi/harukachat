@@ -27,6 +27,24 @@ Template.ChatsIndex.helpers({
   },
   'chats': function () {
     return Chats.find({}, {sort: {dateCreated: 1}});
+  },
+  'getName': function (id) {
+
+    var user = Students.findOne({id: String(id)});
+    if (user)
+      return user.fullname;
+    return "";
+  },
+  'getPhoto': function (id) {
+    var baseUrl = "http://static.harukaedu.com/uploads/students/" + id + "/avatar/thumbs/";
+    var user = Students.findOne({id: String(id)});
+    if (user) {
+      var image = user.image.split(".");
+
+      return baseUrl + image[0] + "_70_70." + image[1];
+    }
+    return "";
+
   }
 });
 
@@ -37,7 +55,6 @@ Template.ChatsIndex.created = function () {
 };
 
 Template.ChatsIndex.rendered = function () {
-  console.log("Rendered");
   $(".chat-content").scrollTop($(".chat-content")[0].scrollHeight);
 };
 
