@@ -43,3 +43,7 @@ Template.ChatsIndex.rendered = function () {
 
 Template.ChatsIndex.destroyed = function () {
 };
+
+Tracker.autorun(function () {
+  console.log("autorun");
+});
