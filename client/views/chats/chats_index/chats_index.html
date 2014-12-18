@@ -12,9 +12,9 @@
           {{#each usersList}}
           <tr>
             <td>
-              <img src="https://mooc.harukaedu.com/uploads/students/145/avatar/thumbs/Alwin_230_230.PNG" style="width: 62px; height: 62px;" class="img-circle">
+              <img src="{{getPhoto userId}}" style="width: 62px; height: 62px;" class="img-circle">
             </td>
-            <td style="vertical-align: middle;">Alwin Daniel</td>
+            <td style="vertical-align: middle;">{{getName userId}}</td>
           </tr>
           {{/each}}
         </tbody>
@@ -30,10 +30,10 @@
           {{# each chats}}
           <div class="chat-item" style="padding-bottom: 80px">
             <div class="aside col-md-2 nopadding">
-              <img src="https://mooc.harukaedu.com/uploads/students/145/avatar/thumbs/Alwin_230_230.PNG" style="width: 62px; height: 62px;" class="img-circle">
+              <img src="{{getPhoto userId}}" style="width: 62px; height: 62px;" class="img-circle">
             </div>
             <div class="article col-md-10 nopadding">
-              <span class="user label label-info">Alwin Daniel</span> <small class="label label-default">{{livestamp dateCreated}}</small>
+              <span class="user label label-info">{{getName userId}}</span> <small class="label label-default">{{livestamp dateCreated}}</small>
               <br>
               <span class="date"></span>
               {{{text}}}
